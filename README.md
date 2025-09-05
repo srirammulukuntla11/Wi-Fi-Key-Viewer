@@ -45,11 +45,6 @@ You can also **export all Wi-Fi credentials as a CSV file**.
    ```
    http://127.0.0.1:5000/
    ```
-📸 Screenshots
-
-**Main Dashboard**
-![Wi-Fi Key Viewer Screenshot](screenshot.png)
-
 ⚠️ Disclaimer
 This project is intended for **educational purposes only**.
 It retrieves Wi-Fi credentials saved **on your own system**. Do not use it for unauthorized access.
