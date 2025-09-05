@@ -12,10 +12,14 @@ You can also **export all Wi-Fi credentials as a CSV file**.
 - Built with **Python, Flask, HTML, CSS**.
   
 📂 Project Structure
+
 📁 wifi-key-viewer
+
 │── app.py           # Flask backend (fetches Wi-Fi profiles & passwords)
+
 │── templates/
 │   └── index.html   # Frontend HTML (renders data dynamically)
+
 │── static/
 │   └── style.css    # Styling for the UI
 
