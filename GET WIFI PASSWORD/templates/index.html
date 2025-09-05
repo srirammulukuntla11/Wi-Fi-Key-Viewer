@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi Profiles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📡 Saved Wi-Fi Profiles & Passwords 🔐</h1>
+        
+        <div class="buttons">
+            <button onclick="window.location.reload()">🔄 Refresh</button>
+            <button onclick="downloadCSV()">📂 Export CSV</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>📶 Profile Name</th>
+                    <th>🔑 Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for wifi in wifi_data %}
+                <tr>
+                    <td>{{ wifi.profile }}</td>
+                    <td>{{ wifi.password if wifi.password else "🔒 Not Available" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function downloadCSV() {
+            let csv = "Profile Name,Password\n";
+            {% for wifi in wifi_data %}
+                csv += "{{ wifi.profile }},{{ wifi.password if wifi.password else 'Not Available' }}\n";
+            {% endfor %}
+            let hiddenElement = document.createElement('a');
+            hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+            hiddenElement.target = '_blank';
+            hiddenElement.download = 'wifi_passwords.csv';
+            hiddenElement.click();
+        }
+    </script>
+</body>
+</html>
