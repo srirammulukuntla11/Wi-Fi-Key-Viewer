@@ -1,4 +1,5 @@
 📡 Wi-Fi Key Viewer 🔐
+
 A simple Python + Flask web application that retrieves saved Wi-Fi profiles and passwords from your system and displays them in a user-friendly web interface.  
 You can also **export all Wi-Fi credentials as a CSV file**.
 
