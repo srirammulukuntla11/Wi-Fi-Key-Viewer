@@ -43,7 +43,7 @@ You can also **export all Wi-Fi credentials as a CSV file**.
 📸 Screenshots
 
 **Main Dashboard**
-![Wi-Fi Key Viewer Screenshot](Screenshot%202025-09-05%20100900.png)
+![Wi-Fi Key Viewer Screenshot](screenshot.png)
 
 ⚠️ Disclaimer
 This project is intended for **educational purposes only**.
